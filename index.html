@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LearnLang: language apps for iPhone</title>
-<meta name="description" content="Learn Thai, Japanese, Mandarin, Korean, Russian, Burmese and Hebrew with games, a sentence builder and real phrases. Fully offline, no account.">
+<meta name="description" content="Learn Thai, Japanese, Mandarin, Korean, Russian and Hebrew with games, a sentence builder and real phrases. Fully offline, no account.">
 <meta property="og:title" content="LearnLang">
 <meta property="og:description" content="Six languages. Learn by playing. Fully offline.">
 <meta property="og:image" content="learnlang-banner.jpg">
@@ -180,6 +180,30 @@
     .b5 { left: auto; right: 0; }
     .nav-links a:first-child { display: none; }
   }
+
+  /* DARK BLUE THEME (Carson, 2026-10-23): deep navy, light text, gold accent,
+     solid cards with a crisp edge. Overrides the light palette above. */
+  :root {
+    --navy: #e8edf7; --navy-soft: #a9b6cf; --muted: #7f8ba6;
+    --gold: #d6b26a; --gold-soft: #3a3320; --sky: rgba(143,180,255,0.10);
+    --card: #0f1f45; --line: rgba(143,180,255,0.16);
+  }
+  body { background: radial-gradient(120% 80% at 50% 0%, #13275a 0%, #0a1531 45%, #060d20 100%) fixed; color: var(--navy); }
+  nav { background: rgba(6,13,32,0.82); }
+  .btn-primary { background: var(--gold); color: #0a1531; box-shadow: 0 8px 24px rgba(214,178,106,0.25); }
+  .btn-primary:hover { box-shadow: 0 12px 28px rgba(214,178,106,0.35); }
+  .btn-ghost { background: rgba(255,255,255,0.04); color: var(--navy); border-color: var(--line); }
+  .hero-art .logo { box-shadow: 0 30px 70px rgba(0,0,0,0.5), 0 0 0 10px rgba(143,180,255,0.10), 0 0 80px rgba(143,180,255,0.18); }
+  .bubble { background: #13254f; color: #eef2fb; border: 1px solid var(--line); box-shadow: 0 12px 28px rgba(0,0,0,0.35); }
+  .promise { background: rgba(15,31,69,0.7); }
+  .app { background: linear-gradient(160deg, #13275a 0%, #0d1b3e 100%); border: 1.5px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+  .app:hover { border-color: rgba(214,178,106,0.45); box-shadow: 0 20px 44px rgba(0,0,0,0.45); }
+  .app .script { opacity: 0.12; }
+  .app-top img { box-shadow: 0 6px 16px rgba(0,0,0,0.45); }
+  .app li { border: 1px solid var(--line); }
+  .store { border: 1px solid rgba(255,255,255,0.18); }
+  .info strong, .info a { color: #eef2fb; }
+  footer { color: var(--muted); }
 </style>
 </head>
 <body>
@@ -200,7 +224,7 @@
   <div>
     <p class="eyebrow">Language apps for iPhone</p>
     <h1>Six languages.<br><em>Learn by playing.</em></h1>
-    <p class="lead">Thai, Japanese, Mandarin, Korean, Russian, Burmese and Hebrew, built from real phrases, a sentence builder and small games. Everything works offline, with no account.</p>
+    <p class="lead">Thai, Japanese, Mandarin, Korean, Russian and Hebrew, built from real phrases, a sentence builder and small games. Everything works offline, with no account.</p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#apps">Choose a language</a>
       <a class="btn btn-ghost" href="#privacy">No tracking, ever</a>
