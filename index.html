@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LearnLang: learn to speak, out loud</title>
-<meta name="description" content="Learn to speak Thai, Japanese, Mandarin, Korean, Russian and Hebrew. Every word comes with how to say it. Games, real phrases, fully offline, no account.">
+<meta name="description" content="Learn to speak Thai, Japanese, Mandarin, Korean, Russian, Hebrew, Hindi and Arabic. Every word comes with how to say it. Games, real phrases, fully offline, no account.">
 <meta property="og:title" content="LearnLang">
-<meta property="og:description" content="Learn to speak. Out loud. Six languages, fully offline.">
+<meta property="og:description" content="Learn to speak. Out loud. Eight languages, fully offline.">
 <meta property="og:image" content="learnlang-share.jpg">
 <link rel="icon" href="learnlang-logo-parrot.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,6 +39,9 @@
   .korean { --src: url("koreanlang-icon.png"); --w: 1024; --x: 182; --y: 90;  --s: 660; background-color: #10282a; }
   .rus    { --src: url("ruslang-icon.png");    --w: 1024; --x: 170; --y: 60;  --s: 680; background-color: #12163A; }
   .hebrew { --src: url("hebrewlang-icon.png"); --w: 1024; --x: 240; --y: 40;  --s: 560; background-color: #0c1440; }
+  .hindi  { --src: url("hindilang-icon.png");  --w: 1024; --x: 170; --y: 70;  --s: 690; background-color: #1a0c14; }
+  .arab   { --src: url("arablang-icon.png");   --w: 1024; --x: 250; --y: 50;  --s: 540; background-color: #0b2318; }
+  .soon { margin-top: auto; align-self: flex-start; padding: 10px 18px; border-radius: 12px; border: 2px dashed var(--gold); color: var(--gold); font-size: 15px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
 
   /* NAV */
   nav { position: sticky; top: 0; z-index: 50; background: rgba(11,22,48,0.88); backdrop-filter: blur(12px); border-bottom: 2px solid rgba(244,241,232,0.08); }
@@ -172,7 +175,7 @@
     <div>
       <p class="eyebrow">Language apps for iPhone</p>
       <h1>Learn to speak.<br><em>Out loud.</em></h1>
-      <p class="lead">Thai, Japanese, Mandarin, Korean, Russian and Hebrew. <b>Every word shows you how to say it</b>, so you can start talking on day one. Games, real phrases, fully offline.</p>
+      <p class="lead">Thai, Japanese, Mandarin, Korean, Russian, Hebrew, and soon Hindi and Arabic. <b>Every word shows you how to say it</b>, so you can start talking on day one. Games, real phrases, fully offline.</p>
       <div class="cta">
         <a class="btn btn-gold" href="#apps">Choose a language</a>
         <a class="btn btn-ghost" href="#privacy">No account, no tracking</a>
@@ -185,7 +188,7 @@
   </header>
 
   <div class="board">
-    <h2>Say hello in six languages</h2>
+    <h2>Say hello in eight languages</h2>
     <div class="row">
       <span class="hello">sa<span class="dot">·</span>wat<span class="dot">·</span>dee</span>
       <span class="hello">kon<span class="dot">·</span>ni<span class="dot">·</span>chi<span class="dot">·</span>wa</span>
@@ -193,6 +196,8 @@
       <span class="hello">an<span class="dot">·</span>nyeong</span>
       <span class="hello">pri<span class="dot">·</span>vyet</span>
       <span class="hello">sha<span class="dot">·</span>lom</span>
+      <span class="hello">na<span class="dot">·</span>ma<span class="dot">·</span>ste</span>
+      <span class="hello">mar<span class="dot">·</span>ha<span class="dot">·</span>ban</span>
     </div>
     <p class="note">Out loud, please. Now you're a parrot too.</p>
   </div>
@@ -277,6 +282,23 @@
         </a>
       </article>
 
+      <!-- HindiLang and ArabLang: swap the "Coming soon" badge for an App Store button once Apple approves them -->
+      <article class="app">
+        <div class="greet"><div class="m hindi" style="--d:96px"></div><div class="bub"><b>na<span class="dot">·</span>ma<span class="dot">·</span>ste!</b><small>hello</small></div></div>
+        <h3>HindiLang<span>Hindi</span></h3>
+        <p>Hindi you can say out loud from the first lesson: five levels from Varnamala to Itihaas, a drawing for every word, and GrowHindi for building real sentences.</p>
+        <ul><li>Diya Catch</li><li>Kite Fight</li><li>GrowHindi</li><li>Word Match</li><li>Offline</li></ul>
+        <span class="soon">Coming soon</span>
+      </article>
+
+      <article class="app">
+        <div class="greet"><div class="m arab" style="--d:96px"></div><div class="bub"><b>mar<span class="dot">·</span>ha<span class="dot">·</span>ban!</b><small>hello</small></div></div>
+        <h3>ArabLang<span>Arabic</span></h3>
+        <p>Arabic made sayable: every word in easy letters, five levels from Alif to Palm, and GrowARB for putting real sentences together.</p>
+        <ul><li>Sentence Rain</li><li>GrowARB</li><li>Word Match</li><li>Flip cards</li><li>Offline</li></ul>
+        <span class="soon">Coming soon</span>
+      </article>
+
     </div>
   </section>
 </div>
@@ -309,7 +331,8 @@
   (function () {
     var hellos = [
       ['sa·wat·dee', 'Thai'], ['kon·ni·chi·wa', 'Japanese'], ['nǐ·hǎo', 'Mandarin'],
-      ['an·nyeong', 'Korean'], ['pri·vyet', 'Russian'], ['sha·lom', 'Hebrew']
+      ['an·nyeong', 'Korean'], ['pri·vyet', 'Russian'], ['sha·lom', 'Hebrew'],
+      ['na·ma·ste', 'Hindi'], ['mar·ha·ban', 'Arabic']
     ];
     var box = document.getElementById('say'), i = 0;
     function show(h) {
